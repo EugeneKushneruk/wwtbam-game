@@ -1,0 +1,77 @@
+@use "../utils/variables" as var
+@use "../utils/mixins" as mix
+
+.info-screen
+  $this: &
+  height: 100vh
+  @include mix.flex(row wrap, center, center)
+  flex: 1 0 100%
+  background: linear-gradient(to right bottom, var.$white-100 50%, var.$orange-5 50%)
+
+  &--game-over
+    background: var.$white-100
+
+  &__cnt-wrapper
+    margin: 0 16px
+    max-width: 624px
+    @include mix.flex(column wrap, center, flex-start)
+    flex: 1 0 auto
+    @include mix.mobile-styles
+      align-items: center
+
+  &__title
+    margin: 0 0 64px
+    padding: 0
+    @include mix.flex(column nowrap, center, flex-start)
+    color: var.$black-100
+    //text-align: center
+    font-size: 56px
+    font-style: normal
+    font-weight: 600
+    line-height: 116%
+    @include mix.mobile-styles
+      font-size: 32px
+      align-items: center
+
+  &__message
+    @extend #{$this}__title
+
+  &__message-txt
+    &:first-child
+      margin: 0 0 8px
+      color: var.$black-100
+      opacity: .5
+      font-size: 32px
+
+  &__btn
+    padding: 20px 24px
+    min-width: 296px
+    @include mix.flex(row nowrap, center, center)
+    flex-shrink: 0
+    border: none
+    border-radius: 12px
+    box-sizing: border-box
+    cursor: pointer
+    transition-property: all
+    transition-duration: var.$transition
+    background-color: var.$orange-100
+    @include mix.mobile-styles
+      padding: 16px 24px
+      min-width: 288px
+      border-radius: 8px
+
+    &:hover
+      background-color: var.$orange-80
+
+    &:active
+      background-color: var.$orange-120
+
+  &__btn-txt
+    color: var.$white-100
+    text-align: center
+    font-size: 20px
+    font-style: normal
+    font-weight: 600
+    line-height: 116%
+    @include mix.mobile-styles
+      font-size: 14px
