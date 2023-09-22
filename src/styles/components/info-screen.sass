@@ -3,10 +3,16 @@
 
 .info-screen
   $this: &
+  margin: 0
+  padding: 0
   height: 100vh
-  @include mix.flex(row wrap, center, center)
+  @include mix.flex(row nowrap)
   flex: 1 0 100%
+  box-sizing: border-box
   background: linear-gradient(to right bottom, var.$white-100 50%, var.$orange-5 50%)
+  @include mix.mobile-styles
+    @include mix.flex(column nowrap, center, center)
+    padding: 48px 16px
 
   &--game-over
     background: var.$white-100
@@ -15,8 +21,11 @@
     margin: 0 16px
     max-width: 624px
     @include mix.flex(column wrap, center, flex-start)
-    flex: 1 0 auto
+    flex: 1 1 auto
     @include mix.mobile-styles
+      margin: 0
+      max-width: 288px
+      justify-content: space-between
       align-items: center
 
   &__title
@@ -24,12 +33,12 @@
     padding: 0
     @include mix.flex(column nowrap, center, flex-start)
     color: var.$black-100
-    //text-align: center
     font-size: 56px
     font-style: normal
     font-weight: 600
     line-height: 116%
     @include mix.mobile-styles
+      margin: 0 0 auto
       font-size: 32px
       align-items: center
 
@@ -38,7 +47,6 @@
 
   &__message-txt
     &:first-child
-      margin: 0 0 8px
       color: var.$black-100
       opacity: .5
       font-size: 32px
