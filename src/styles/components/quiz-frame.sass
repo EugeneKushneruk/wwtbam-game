@@ -1,0 +1,61 @@
+@use "../utils/variables" as var
+@use "../utils/mixins" as mix
+
+.quiz-frame
+  height: 100vh
+  @include mix.flex(column wrap, center, stretch)
+  flex: 1 1 auto
+  background-color: var.$black-5
+
+  &__wrapper
+    padding: 130px 80px 120px
+    flex: 1 0 auto
+    @include mix.flex(column wrap, space-between, flex-start)
+    @include mix.mobile-styles
+      padding: 24px 0
+      align-items: stretch
+    //@include mix.flex(column wrap, flex-start, stretch)
+
+  &__question
+    overflow: scroll
+    flex: 0 0 auto
+    //flex: 2 0 auto
+    margin: 0
+    padding: 0
+    max-height: 40vh
+    color: var.$black-100
+    font-size: 32px
+    font-style: normal
+    font-weight: 600
+    line-height: 116%
+    @include mix.mobile-styles
+      margin: auto 0
+      padding: 0 32px
+      text-align: center
+
+  &__answers
+    flex: 0 0 auto
+    //flex: 1 0 auto
+    max-height: 40vh
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 0
+    overflow: auto
+    white-space: nowrap
+    //max-width: calc(373px * 2)
+    //align-content: flex-end
+    //@include mix.flex(row wrap, flex-start, stretch)
+    @include mix.mobile-styles
+      grid-template-columns: repeat(1, 1fr)
+
+  &__btn
+    cursor: pointer
+    margin: 0
+    padding: 0
+    border: none
+    box-sizing: content-box
+    background-color: transparent
+    @include mix.flex()
+
+    &:disabled
+      cursor: not-allowed
