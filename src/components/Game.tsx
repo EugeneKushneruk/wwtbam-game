@@ -1,20 +1,38 @@
 "use client";
 
-import Box from "@/components/Box";
-import Button from "@/components/Button";
-import { useAppDispatch, useAppSelector } from "@/redux";
-import { addQuestion, removeQuestion } from "@/redux/slices/test";
+import InfoScreen from "@/components/InfoScreen";
+import ServiceScreen from "@/components/ServiceScreen";
+import ProgressBar from "@/components/ProgressBar";
+import QuizFrame from "@/components/QuizFrame";
+import { useAppSelector } from "@/redux/hooks";
+import { useGetQuestionsQuery } from "@/redux/services/questionsAPI";
+import type { FC } from "react";
 
-const Game = () => {
-  const dispatch = useAppDispatch();
-  const questions = useAppSelector(state => state.test.questions);
+const GameContent: FC = () => {
+  const screen = useAppSelector(state => state.game.status)
+  const gameHasStarted = screen === "in-progress"
+
+  if (gameHasStarted) {
+    return (
+      <>
+        <QuizFrame />
+        <ProgressBar />
+      </>
+    );
+  }
 
   return (
-    <Box>
-      <Button handler={() => dispatch(addQuestion({ text: "Hello World" }))}>Hello World</Button>
-      {questions.map(({ id, text }) => <span key={id}>{` ${text} `}</span>)}
-    </Box>
-  )
+    <InfoScreen />
+  );
+};
+
+const Game: FC = () => {
+  const { isLoading, error } = useGetQuestionsQuery(null);
+
+  if (isLoading) return <ServiceScreen enableSpinner />
+  if (error) return <ServiceScreen showError />
+
+  return <main className="game"><GameContent /></main>
 };
 
 export default Game;
