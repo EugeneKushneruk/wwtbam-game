@@ -1,0 +1,51 @@
+@use "../utils/variables" as var
+@use "../utils/mixins" as mix
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.service-screen
+  $msg-font-size: 56px
+  $msg-mob-font-size: 32px
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  @include mix.flex()
+
+  &__wrapper
+    color: blue
+    @include mix.flex()
+
+  &__spinner
+    border: 10px solid var.$orange-5
+    border-top: 10px solid var.$orange-100
+    border-radius: 50%
+    width: 80px
+    height: 80px
+    animation: spin 1s linear infinite
+
+  &__message
+    margin: 0
+    padding: 32px
+    @include mix.flex(column nowrap, center, center)
+    color: var.$black-100
+    text-align: center
+    font-size: $msg-font-size
+    font-style: normal
+    font-weight: 600
+    line-height: 116%
+    @include mix.mobile-styles
+      font-size: $msg-mob-font-size
+      align-items: center
+
+  &__message-txt
+    &:last-child
+      margin: 8px 0 0
+      font-size: calc($msg-font-size / 2)
+      @include mix.mobile-styles
+        font-size: calc($msg-mob-font-size / 2)
