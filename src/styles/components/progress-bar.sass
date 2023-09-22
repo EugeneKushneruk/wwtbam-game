@@ -7,6 +7,8 @@
   @include mix.flex(column wrap, center, stretch)
   flex: 1 0 100%
   background-color: var.$white-100
+  @include mix.small-screen-styles
+    display: none
   @include mix.mobile-styles
     display: none
     background-color: var.$black-5

@@ -23,6 +23,10 @@
   @media (max-width: var.$mobile-breakpoint)
     @content
 
+@mixin small-screen-styles
+  @media (min-width: var.$mobile-breakpoint) and (max-width: var.$small-screen-breakpoint)
+    @content
+
 @mixin hexagon-props()
   background-size: contain
   background-repeat: no-repeat

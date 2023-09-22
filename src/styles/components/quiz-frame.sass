@@ -11,15 +11,16 @@
     padding: 130px 80px 120px
     flex: 1 0 auto
     @include mix.flex(column wrap, space-between, flex-start)
+    @include mix.small-screen-styles
+      padding: 64px 32px
+      align-items: center
     @include mix.mobile-styles
       padding: 24px 0
       align-items: stretch
-    //@include mix.flex(column wrap, flex-start, stretch)
 
   &__question
     overflow: scroll
     flex: 0 0 auto
-    //flex: 2 0 auto
     margin: 0
     padding: 0
     max-height: 40vh
@@ -28,23 +29,22 @@
     font-style: normal
     font-weight: 600
     line-height: 116%
+    @include mix.small-screen-styles
+      text-align: center
     @include mix.mobile-styles
       margin: auto 0
-      padding: 0 32px
+      padding: 0 16px
+      font-size: 18px
       text-align: center
 
   &__answers
     flex: 0 0 auto
-    //flex: 1 0 auto
     max-height: 40vh
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: 0
     overflow: auto
     white-space: nowrap
-    //max-width: calc(373px * 2)
-    //align-content: flex-end
-    //@include mix.flex(row wrap, flex-start, stretch)
     @include mix.mobile-styles
       grid-template-columns: repeat(1, 1fr)
 
@@ -53,7 +53,7 @@
     margin: 0
     padding: 0
     border: none
-    box-sizing: content-box
+    box-sizing: border-box
     background-color: transparent
     @include mix.flex()
 
