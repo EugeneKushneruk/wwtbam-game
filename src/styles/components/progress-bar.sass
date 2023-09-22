@@ -1,0 +1,29 @@
+@use "../utils/variables" as var
+@use "../utils/mixins" as mix
+
+.progress-bar
+  height: 100vh
+  max-width: 376px
+  @include mix.flex(column wrap, center, stretch)
+  flex: 1 0 100%
+  background-color: var.$white-100
+  @include mix.mobile-styles
+    display: none
+    background-color: var.$black-5
+
+  &__list
+    overflow: scroll
+    margin: 0
+    padding: 32px 0
+    height: auto
+    max-height: 100%
+    @include mix.flex(column nowrap, flex-start, center)
+    flex-direction: column-reverse
+
+  &__list-item
+    width: 100%
+    height: auto
+    @include mix.flex()
+
+    &:not(:last-child)
+      margin-top: 8px
