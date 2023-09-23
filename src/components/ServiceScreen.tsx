@@ -12,7 +12,7 @@ type serviceScreenProps = | serviceScreenSpinnerType | serviceScreenErrorType
 
 const ServiceScreen: FC<serviceScreenProps> = ({ enableSpinner, showError }) => {
   return (
-    <div className="service-screen">
+    <section className="service-screen">
       <div className="service-screen__wrapper">
         {enableSpinner && (
           <div className="service-screen__spinner" />
@@ -25,7 +25,7 @@ const ServiceScreen: FC<serviceScreenProps> = ({ enableSpinner, showError }) => 
           </h1>
         )}
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -43,7 +43,7 @@ const InfoScreen: FC = () => {
   })
 
   return (
-    <div className={cmpClass}>
+    <section className={cmpClass}>
       <div className="info-screen__cnt-wrapper">
         <ThumbSVG />
       </div>
@@ -53,7 +53,7 @@ const InfoScreen: FC = () => {
           <span className="info-screen__btn-txt">{buttonTxt}</span>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

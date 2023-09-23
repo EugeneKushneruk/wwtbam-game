@@ -13,7 +13,7 @@ const ProgressBar: FC = () => {
   })
 
   return (
-    <div className={cmpClass}>
+    <aside className={cmpClass}>
       <MenuButton />
       <div className="progress-bar__list-wrapper">
         <ul className="progress-bar__list">
@@ -29,7 +29,7 @@ const ProgressBar: FC = () => {
           })}
         </ul>
       </div>
-    </div>
+    </aside>
   );
 };
 

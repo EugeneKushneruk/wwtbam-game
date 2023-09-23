@@ -53,7 +53,7 @@ const QuizFrame: FC = () => {
   }, [showResult, chosenAnswers, correctAnswers, dispatch]);
 
   return (
-    <div className="quiz-frame">
+    <section className="quiz-frame">
       <MenuBtn />
       <div className="quiz-frame__wrapper">
         <h3 className="quiz-frame__question">{question}</h3>
@@ -85,7 +85,7 @@ const QuizFrame: FC = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
