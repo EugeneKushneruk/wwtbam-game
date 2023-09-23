@@ -1,6 +1,7 @@
 "use client";
 
 import Hexagon from "@/components/Hexagon";
+import MenuBtn from "@/components/MenuButton"
 import { useEffect, useMemo } from "react";
 import { useAppSelector, useAppDispatch } from "@/redux/hooks";
 import { addAnswer, toggleResult, nextQuestion, gameOver } from "@/redux/slices/game"
@@ -53,6 +54,7 @@ const QuizFrame: FC = () => {
 
   return (
     <div className="quiz-frame">
+      <MenuBtn />
       <div className="quiz-frame__wrapper">
         <h3 className="quiz-frame__question">{question}</h3>
         <div className="quiz-frame__answers">
