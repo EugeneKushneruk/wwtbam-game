@@ -11,7 +11,6 @@ interface IGameState {
   status: "start" | "in-progress" | "game-over";
   money: string,
   step: number,
-
   currentQuestion: {
     showResult: boolean,
     question: string,
@@ -19,7 +18,6 @@ interface IGameState {
     userAnswers: number[],
     correctAnswersIDs: number[]
   },
-
   showMobMenu: boolean;
   progress: ISteps[];
   questions: IQuestion[];
