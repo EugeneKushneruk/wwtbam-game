@@ -1,12 +1,17 @@
 import Hexagon from "@/components/Hexagon";
 import MenuButton from "@/components/MenuButton";
 import { useAppSelector } from "@/redux/hooks";
+import {
+  selectShowMobMenu,
+  selectProgress,
+  selectStep,
+} from "@/redux/slices/game";
 import classNames from "classnames";
 
 function ProgressBar() {
-  const showMobMenu = useAppSelector((state) => state.game.showMobMenu);
-  const progress = useAppSelector((state) => state.game.progress);
-  const step = useAppSelector((state) => state.game.step);
+  const showMobMenu = useAppSelector(selectShowMobMenu);
+  const progress = useAppSelector(selectProgress);
+  const step = useAppSelector(selectStep);
   const cmpClass = classNames("progress-bar", {
     "progress-bar--show-as-menu": showMobMenu,
   });
@@ -32,6 +37,6 @@ function ProgressBar() {
       </div>
     </aside>
   );
-};
+}
 
 export default ProgressBar;

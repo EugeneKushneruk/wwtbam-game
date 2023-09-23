@@ -3,11 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import { questionsAPI } from "@/redux/services/questionsAPI";
 import type { IQuestion, IAnswer } from "@/redux/services/questionsAPI";
 import type { PayloadAction } from "@reduxjs/toolkit";
+import type { RootStateType } from "@/redux";
 
 interface ISteps {
   level: number;
   money: string;
 }
+
 interface IGameState {
   status: "start" | "in-progress" | "game-over";
   money: string;
@@ -113,6 +115,16 @@ const game = createSlice({
     );
   },
 });
+
+// Selectors
+export const selectStatus = (state: RootStateType) => state.game.status;
+export const selectStep = (state: RootStateType) => state.game.step;
+export const selectMoney = (state: RootStateType) => state.game.money;
+export const selectProgress = (state: RootStateType) => state.game.progress;
+export const selectShowMobMenu = (state: RootStateType) =>
+  state.game.showMobMenu;
+export const selectCurrentQuestion = (state: RootStateType) =>
+  state.game.currentQuestion;
 
 export const {
   startTheGame,

@@ -14,4 +14,6 @@ export const store = configureStore({
     getDefaultMiddleware().concat([questionsAPI.middleware]),
 });
 
+export type AppDispatchType = typeof store.dispatch;
+export type RootStateType = ReturnType<typeof store.getState>;
 export default store;

@@ -40,6 +40,6 @@ function Hexagon(props: HexagonProps) {
       </span>
     </span>
   );
-};
+}
 
 export default Hexagon;

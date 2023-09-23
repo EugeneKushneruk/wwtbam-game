@@ -2,7 +2,12 @@
 
 import ThumbSVG from "@/components/ThumbSVG";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { startTheGame, resetGame } from "@/redux/slices/game";
+import {
+  startTheGame,
+  resetGame,
+  selectStatus,
+  selectMoney,
+} from "@/redux/slices/game";
 import classNames from "classnames";
 
 type InfoScreenTitleProps = {
@@ -26,12 +31,12 @@ function InfoScreenTitle({ isGameOver, money }: InfoScreenTitleProps) {
       <span>a millionaire?</span>
     </h1>
   );
-};
+}
 
-function InfoScreen () {
+function InfoScreen() {
   const dispatch = useAppDispatch();
-  const status = useAppSelector((state) => state.game.status);
-  const money = useAppSelector((state) => state.game.money);
+  const status = useAppSelector(selectStatus);
+  const money = useAppSelector(selectMoney);
 
   const isGameOver = status === "game-over";
   const buttonTxt = isGameOver ? "Try again" : "Start";
@@ -54,6 +59,6 @@ function InfoScreen () {
       </div>
     </section>
   );
-};
+}
 
 export default InfoScreen;

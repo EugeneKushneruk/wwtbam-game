@@ -5,10 +5,11 @@ import ServiceScreen from "@/components/ServiceScreen";
 import ProgressBar from "@/components/ProgressBar";
 import QuizFrame from "@/components/QuizFrame";
 import { useAppSelector } from "@/redux/hooks";
+import { selectStatus } from "@/redux/slices/game";
 import { useGetQuestionsQuery } from "@/redux/services/questionsAPI";
 
 function GameContent() {
-  const screen = useAppSelector((state) => state.game.status);
+  const screen = useAppSelector(selectStatus);
   const gameHasStarted = screen === "in-progress";
 
   if (gameHasStarted) {

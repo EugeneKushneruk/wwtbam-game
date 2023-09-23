@@ -3,7 +3,7 @@ type ThumbSVGProps = {
   height?: number | string;
 };
 
-function ThumbSVG({width = "100%", height = "100%"}: ThumbSVGProps) {
+function ThumbSVG({ width = "100%", height = "100%" }: ThumbSVGProps) {
   return (
     <svg
       width={width}

@@ -16,12 +16,12 @@ function ServiceScreen({ enableSpinner, showError }: ServiceScreenProps) {
 
         {showError && (
           <h1 className="service-screen__message">
-          <span className="service-screen__message-txt">
-            Oops, something went wrong...
-          </span>
             <span className="service-screen__message-txt">
-            Please, try to reload the page
-          </span>
+              Oops, something went wrong...
+            </span>
+            <span className="service-screen__message-txt">
+              Please, try to reload the page
+            </span>
           </h1>
         )}
       </div>

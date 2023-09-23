@@ -1,10 +1,10 @@
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { toggleMobMenu } from "@/redux/slices/game";
+import { toggleMobMenu, selectShowMobMenu } from "@/redux/slices/game";
 import Image from "next/image";
 
 function MenuButton() {
   const dispatcher = useAppDispatch();
-  const showMobMenu = useAppSelector((state) => state.game.showMobMenu);
+  const showMobMenu = useAppSelector(selectShowMobMenu);
   const icon = showMobMenu ? "Close.svg" : "Menu.svg";
   const handler = () => dispatcher(toggleMobMenu(!showMobMenu));
 
@@ -19,6 +19,6 @@ function MenuButton() {
       <Image src={icon} height={24} width={24} alt="Menu icon" />
     </span>
   );
-};
+}
 
 export default MenuButton;

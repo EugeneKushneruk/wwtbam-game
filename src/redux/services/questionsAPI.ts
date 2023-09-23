@@ -6,6 +6,7 @@ export interface IAnswer {
   text: string;
   correct?: boolean;
 }
+
 export interface IQuestion {
   level: number;
   money: string;
@@ -13,6 +14,7 @@ export interface IQuestion {
   answers: IAnswer[];
   correctAnswersIDs: number[];
 }
+
 interface IResponse {
   questions: IQuestion[];
 }

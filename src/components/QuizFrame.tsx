@@ -9,12 +9,13 @@ import {
   toggleResult,
   nextQuestion,
   gameOver,
+  selectCurrentQuestion,
 } from "@/redux/slices/game";
 
 function QuizFrame() {
   const dispatch = useAppDispatch();
   const { showResult, question, answers, userAnswers, correctAnswersIDs } =
-    useAppSelector((state) => state.game.currentQuestion);
+    useAppSelector(selectCurrentQuestion);
   const chosenAnswers = useMemo(() => new Set(userAnswers), [userAnswers]);
   const correctAnswers = useMemo(
     () => new Set(correctAnswersIDs),
@@ -47,10 +48,10 @@ function QuizFrame() {
         correctAnswers.has(answer),
       );
 
-      timer = setTimeout(() => roundPassed
-        ? dispatch(nextQuestion())
-        : dispatch(gameOver()),
-        2000);
+      timer = setTimeout(
+        () => (roundPassed ? dispatch(nextQuestion()) : dispatch(gameOver())),
+        2000,
+      );
     }
 
     return () => clearTimeout(timer);
@@ -92,6 +93,6 @@ function QuizFrame() {
       </div>
     </section>
   );
-};
+}
 
 export default QuizFrame;
