@@ -2,6 +2,7 @@
 @use "../utils/mixins" as mix
 
 .quiz-frame
+  position: relative
   height: 100vh
   @include mix.flex(column wrap, center, stretch)
   flex: 1 1 auto
@@ -46,6 +47,7 @@
     overflow: auto
     white-space: nowrap
     @include mix.mobile-styles
+      width: 100%
       grid-template-columns: repeat(1, 1fr)
 
   &__btn

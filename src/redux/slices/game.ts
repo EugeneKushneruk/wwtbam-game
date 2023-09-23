@@ -11,7 +11,6 @@ interface IGameState {
   status: "start" | "in-progress" | "game-over";
   money: string,
   step: number,
-
   currentQuestion: {
     showResult: boolean,
     question: string,
@@ -19,7 +18,7 @@ interface IGameState {
     userAnswers: number[],
     correctAnswersIDs: number[]
   },
-
+  showMobMenu: boolean;
   progress: ISteps[];
   questions: IQuestion[];
 }
@@ -35,6 +34,7 @@ const initialState: IGameState = {
     userAnswers: [],
     correctAnswersIDs: []
   },
+  showMobMenu: false,
   progress: [],
   questions: []
 };
@@ -60,6 +60,9 @@ const game = createSlice({
     },
     toggleResult(state) {
       state.currentQuestion.showResult = true
+    },
+    toggleMobMenu(state, action: PayloadAction<boolean>) {
+      state.showMobMenu = action.payload
     },
     nextQuestion(state) {
       // game.caseReducers.startTheGame(state)
@@ -107,5 +110,5 @@ const game = createSlice({
   },
 })
 
-export const { startTheGame, addAnswer, toggleResult, nextQuestion, gameOver, resetGame } = game.actions;
+export const { startTheGame, addAnswer, toggleResult, toggleMobMenu, nextQuestion, gameOver, resetGame } = game.actions;
 export default game.reducer;

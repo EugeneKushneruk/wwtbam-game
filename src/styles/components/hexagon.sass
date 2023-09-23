@@ -56,12 +56,14 @@
     @include mix.flex(row nowrap, center, center)
 
     #{$this}--as-btn &
+      padding: 0 48px
+      justify-content: flex-start
       width: 373px
       @include mix.mobile-styles
+        padding: 0 40px
         width: 288px
 
   &__txt
-    width: 100%
     max-width: 80%
     @include mix.truncate-txt()
     user-select: none
@@ -69,6 +71,16 @@
     font-size: 20px
     font-style: normal
     font-weight: 400
+    line-height: 116%
+    @include mix.mobile-styles
+      font-size: 14px
+
+  &__txt-prefix
+    margin-right: 8px
+    color: var.$orange-100
+    font-size: 20px
+    font-style: normal
+    font-weight: 600
     line-height: 116%
     @include mix.mobile-styles
       font-size: 14px

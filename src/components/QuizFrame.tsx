@@ -1,6 +1,7 @@
 "use client";
 
 import Hexagon from "@/components/Hexagon";
+import MenuBtn from "@/components/MenuButton"
 import { useEffect, useMemo } from "react";
 import { useAppSelector, useAppDispatch } from "@/redux/hooks";
 import { addAnswer, toggleResult, nextQuestion, gameOver } from "@/redux/slices/game"
@@ -52,11 +53,12 @@ const QuizFrame: FC = () => {
   }, [showResult, chosenAnswers, correctAnswers, dispatch]);
 
   return (
-    <div className="quiz-frame">
+    <section className="quiz-frame">
+      <MenuBtn />
       <div className="quiz-frame__wrapper">
         <h3 className="quiz-frame__question">{question}</h3>
         <div className="quiz-frame__answers">
-          {answers.map(({ id, text }) => {
+          {answers.map(({ id, text, prefix }) => {
             const selected = chosenAnswers.has(id)
             const disabled = disableAllBtn || chosenAnswers.has(id)
             const correct = showResult && correctAnswers.has(id)
@@ -71,6 +73,7 @@ const QuizFrame: FC = () => {
               >
                 <Hexagon
                   asBtn={true}
+                  prefix={prefix}
                   selected={selected}
                   correct={correct}
                   wrong={wrong}
@@ -82,7 +85,7 @@ const QuizFrame: FC = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,6 +2,8 @@
 @use "../utils/mixins" as mix
 
 .progress-bar
+  z-index: 5
+  position: relative
   height: 100vh
   max-width: 376px
   @include mix.flex(column wrap, center, stretch)
@@ -11,10 +13,47 @@
     display: none
   @include mix.mobile-styles
     display: none
-    background-color: var.$black-5
+
+  &:before
+    display: none
+    content: ""
+    z-index: 1
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    opacity: .5
+    background-color: var.$black-100
+    @include mix.small-screen-styles
+      display: block
+
+  &--show-as-menu
+    position: fixed
+    top: 0
+    right: 0
+    width: 100%
+    @include mix.small-screen-styles
+      display: flex
+    @include mix.mobile-styles
+      display: flex
+      max-width: 100%
+      bottom: 0
+      left: 0
+
+  &__list-wrapper
+    position: relative
+    z-index: 2
+    height: 100%
+    @include mix.flex(column wrap, center, stretch)
+    background-color: var.$white-100
+    @include mix.mobile-styles
+      background-color: var.$black-5
 
   &__list
     overflow: scroll
+    position: relative
+    z-index: 3
     margin: 0
     padding: 32px 0
     height: auto

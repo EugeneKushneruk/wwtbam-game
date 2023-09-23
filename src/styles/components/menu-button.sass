@@ -1,0 +1,17 @@
+@use "../utils/variables" as var
+@use "../utils/mixins" as mix
+
+.menu-btn
+  z-index: 4
+  position: absolute
+  top: 16px
+  right: 16px
+  @include mix.flex()
+  display: none
+  cursor: pointer
+  text-align: center
+  color: var.$black-100
+  @include mix.small-screen-styles
+    display: flex
+  @include mix.mobile-styles
+    display: flex

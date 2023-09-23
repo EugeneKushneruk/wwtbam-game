@@ -2,6 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 export interface IAnswer {
   id: number;
+  prefix: string,
   text: string;
   correct?: boolean;
 }

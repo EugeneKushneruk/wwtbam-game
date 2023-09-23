@@ -5,19 +5,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "1850s"
       },
       {
         "id": 2,
+        "prefix": "B",
         "correct": true,
         "text": "1880s"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "1930s"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "1950s"
       }
     ],
@@ -30,19 +34,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "Report"
       },
       {
         "id": 2,
+        "prefix": "B",
         "text": "Record"
       },
       {
         "id": 3,
+        "prefix": "C",
         "correct": true,
         "text": "Field",
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "File"
       }
     ],
@@ -51,22 +59,26 @@ const questionsMock = [
   },
   {
     "level": 3,
-    "question": "'OS' computer abbreviation usually means ?",
+    "question": "'OS' computer abbreviation usually means?",
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "Order of Significance"
       },
       {
         "id": 2,
+        "prefix": "B",
         "text": "Open Software"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "Optical Sensor"
       },
       {
         "id": 4,
+        "prefix": "D",
         "correct": true,
         "text": "Operating System"
       }
@@ -80,19 +92,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "correct": true,
         "text": "1900s"
       },
       {
         "id": 2,
+        "prefix": "B",
         "text": "1850s"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "1860s"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "1870s"
       }
     ],
@@ -105,19 +121,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "Image file"
       },
       {
         "id": 2,
+        "prefix": "B",
         "correct": true,
         "text": "Animation/movie file"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "Audio file"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "MS Office document"
       }
     ],
@@ -130,19 +150,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "1950s"
       },
       {
         "id": 2,
+        "prefix": "B",
         "text": "1960s"
       },
       {
         "id": 3,
+        "prefix": "C",
         "correct": true,
         "text": "1970s"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "1980s"
       }
     ],
@@ -155,19 +179,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "Sound"
       },
       {
         "id": 2,
+        "prefix": "B",
         "correct": true,
         "text": "Remote control"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "Color balance"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "High voltage"
       }
     ],
@@ -180,19 +208,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "correct": true,
         "text": "Flash"
       },
       {
         "id": 2,
+        "prefix": "B",
         "text": "Flange"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "Fury"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "FRAM"
       }
     ],
@@ -201,28 +233,32 @@ const questionsMock = [
   },
   {
     "level": 9,
-    "question": "The purpose of choke in tube light is ?",
+    "question": "What is the Celsius equivalent of 77 degrees Fahrenheit?",
     "answers": [
       {
         "id": 1,
-        "text": "To decrease the current"
+        "prefix": "A",
+        "text": "15"
       },
       {
         "id": 2,
-        "text": "To increase the current"
+        "prefix": "B",
+        "text": "20"
       },
       {
         "id": 3,
-        "text": "To decrease the voltage momentarily"
+        "prefix": "C",
+        "correct": true,
+        "text": "25"
       },
       {
         "id": 4,
-        "correct": true,
-        "text": "To increase the voltage momentarily"
+        "prefix": "D",
+        "text": "30"
       }
     ],
     "money": "$125,000",
-    "correctAnswersIDs": [4]
+    "correctAnswersIDs": [3]
   },
   {
     "level": 10,
@@ -230,19 +266,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "correct": true,
         "text": "Alan Turing"
       },
       {
         "id": 2,
+        "prefix": "B",
         "text": "Jeff Bezos"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "George Boole"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "Charles Babbage"
       }
     ],
@@ -255,19 +295,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "Dennis Ritchie & Ken Thompson"
       },
       {
         "id": 2,
+        "prefix": "B",
         "correct": true,
         "text": "David Filo & Jerry Yang"
       },
       {
         "id": 3,
+        "prefix": "C",
         "text": "Vint Cerf & Robert Kahn"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "Steve Case & Jeff Bezos"
       }
     ],
@@ -280,19 +324,23 @@ const questionsMock = [
     "answers": [
       {
         "id": 1,
+        "prefix": "A",
         "text": "Choke"
       },
       {
         "id": 2,
+        "prefix": "B",
         "text": "Inductor"
       },
       {
         "id": 3,
+        "prefix": "C",
         "correct": true,
         "text": "Resistor"
       },
       {
         "id": 4,
+        "prefix": "D",
         "text": "Capacitor"
       }
     ],

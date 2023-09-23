@@ -6,6 +6,7 @@ type hexagonProps = {
   active?: boolean,
   inactive?: boolean,
   asBtn?: boolean
+  prefix?: string,
   selected?: boolean
   correct?: boolean
   wrong?: boolean
@@ -17,6 +18,7 @@ const Hexagon: FC<hexagonProps> = (props) => {
     active,
     inactive,
     asBtn,
+    prefix,
     selected,
     correct,
     wrong
@@ -33,6 +35,9 @@ const Hexagon: FC<hexagonProps> = (props) => {
   return (
     <span className={cmpClass}>
       <span className="hexagon__wrapper">
+        {!!prefix && (
+          <span className="hexagon__txt-prefix">{prefix}</span>
+        )}
         <span className="hexagon__txt">{children}</span>
       </span>
     </span>
