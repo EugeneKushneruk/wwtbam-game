@@ -1,18 +1,18 @@
 import classNames from "classnames";
-import type { FC, ReactNode } from "react";
+import type { ReactNode } from "react";
 
-type hexagonProps = {
-  children: ReactNode,
-  active?: boolean,
-  inactive?: boolean,
-  asBtn?: boolean
-  prefix?: string,
-  selected?: boolean
-  correct?: boolean
-  wrong?: boolean
+type HexagonProps = {
+  children: ReactNode;
+  active?: boolean;
+  inactive?: boolean;
+  asBtn?: boolean;
+  prefix?: string;
+  selected?: boolean;
+  correct?: boolean;
+  wrong?: boolean;
 };
 
-const Hexagon: FC<hexagonProps> = (props) => {
+function Hexagon(props: HexagonProps) {
   const {
     children,
     active,
@@ -21,8 +21,8 @@ const Hexagon: FC<hexagonProps> = (props) => {
     prefix,
     selected,
     correct,
-    wrong
-  } = props
+    wrong,
+  } = props;
   const cmpClass = classNames("hexagon", {
     "hexagon--active": active,
     "hexagon--inactive": inactive,
@@ -30,14 +30,12 @@ const Hexagon: FC<hexagonProps> = (props) => {
     "hexagon--as-btn-selected": selected,
     "hexagon--as-btn-correct": correct,
     "hexagon--as-btn-wrong": wrong,
-    })
+  });
 
   return (
     <span className={cmpClass}>
       <span className="hexagon__wrapper">
-        {!!prefix && (
-          <span className="hexagon__txt-prefix">{prefix}</span>
-        )}
+        {!!prefix && <span className="hexagon__txt-prefix">{prefix}</span>}
         <span className="hexagon__txt">{children}</span>
       </span>
     </span>

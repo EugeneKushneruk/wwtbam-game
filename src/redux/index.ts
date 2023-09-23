@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import gameReducer from "./slices/game";
-import { questionsAPI } from "./services/questionsAPI"
+import { questionsAPI } from "./services/questionsAPI";
 
 const rootReducer = combineReducers({
   game: gameReducer,
-  [questionsAPI.reducerPath]: questionsAPI.reducer
+  [questionsAPI.reducerPath]: questionsAPI.reducer,
 });
 
 export const store = configureStore({
@@ -13,3 +13,5 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([questionsAPI.middleware]),
 });
+
+export default store;

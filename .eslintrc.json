@@ -1,3 +1,18 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:react/jsx-runtime",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier"],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "react/require-default-props": "off"
+  }
 }
