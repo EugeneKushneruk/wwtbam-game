@@ -11,6 +11,7 @@
   &__wrapper
     padding: 130px 80px 120px
     flex: 1 0 auto
+    box-sizing: border-box
     @include mix.flex(column wrap, space-between, flex-start)
     @include mix.small-screen-styles
       padding: 64px 32px
@@ -20,11 +21,11 @@
       align-items: stretch
 
   &__question
-    overflow: scroll
-    flex: 0 0 auto
+    overflow: auto
+    flex: 1 1 auto
     margin: 0
     padding: 0
-    max-height: 40vh
+    max-height: 35vh
     color: var.$black-100
     font-size: 32px
     font-style: normal
@@ -39,12 +40,12 @@
       text-align: center
 
   &__answers
+    overflow: auto
     flex: 0 0 auto
     max-height: 40vh
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: 0
-    overflow: auto
     white-space: nowrap
     @include mix.mobile-styles
       width: 100%
