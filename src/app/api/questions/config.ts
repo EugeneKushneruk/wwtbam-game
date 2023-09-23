@@ -51,7 +51,7 @@ const questionsMock = [
   },
   {
     "level": 3,
-    "question": "'OS' computer abbreviation usually means ?",
+    "question": "'OS' computer abbreviation usually means?",
     "answers": [
       {
         "id": 1,
@@ -201,28 +201,28 @@ const questionsMock = [
   },
   {
     "level": 9,
-    "question": "The purpose of choke in tube light is ?",
+    "question": "What is the Celsius equivalent of 77 degrees Fahrenheit?",
     "answers": [
       {
         "id": 1,
-        "text": "To decrease the current"
+        "text": "15"
       },
       {
         "id": 2,
-        "text": "To increase the current"
+        "text": "20"
       },
       {
         "id": 3,
-        "text": "To decrease the voltage momentarily"
+        "correct": true,
+        "text": "25"
       },
       {
         "id": 4,
-        "correct": true,
-        "text": "To increase the voltage momentarily"
+        "text": "30"
       }
     ],
     "money": "$125,000",
-    "correctAnswersIDs": [4]
+    "correctAnswersIDs": [3]
   },
   {
     "level": 10,
