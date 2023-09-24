@@ -83,42 +83,60 @@ function ThumbSVG({ width = "100%", height = "100%" }: ThumbSVGProps) {
               fill="#C4674E"
             />
           </g>
-          <g id="Group_3" className="animation animation--bounce">
+          <g
+            id="Group_3"
+            // className="anim-flash anim-flash--svg anim-flash--star-3"
+          >
             <path
               id="Vector_14"
               d="M485.832 267.864L479.726 246.872L474.06 267.864L453.753 274.566L474.06 281.416L479.726 304.176L486.127 281.564L505.698 274.566L485.832 267.864Z"
               fill="#FFD62A"
             />
           </g>
-          <g id="Group_4" className="animation animation--bounce">
+          <g
+            id="Group_4"
+            // className="anim-flash anim-flash--svg anim-flash--star-2"
+          >
             <path
               id="Vector_15"
               d="M147.898 106.336L141.938 85.7857L136.347 106.262L116.481 112.891L136.347 119.52L141.938 141.838L148.192 119.668L167.396 112.891L147.898 106.336Z"
               fill="#FFD62A"
             />
           </g>
-          <g id="Group_5" className="animation animation--bounce">
+          <g
+            id="Group_5"
+            // className="anim-flash anim-flash--svg anim-flash--star-3"
+          >
             <path
               id="Vector_16"
               d="M525.416 213.874L521.737 201.205L518.279 213.874L506.066 217.851L518.279 221.976L521.737 235.75L525.563 222.123L537.409 217.851L525.416 213.874Z"
               fill="#FFD62A"
             />
           </g>
-          <g id="Group_6" className="animation animation--bounce">
+          <g
+            id="Group_6"
+            // className="anim-flash anim-flash--svg anim-flash--star-2"
+          >
             <path
               id="Vector_17"
               d="M104.783 174.467L101.177 162.093L97.7929 174.467L85.8 178.445L97.7929 182.422L101.177 195.901L104.93 182.496L116.481 178.445L104.783 174.467Z"
               fill="#FFD62A"
             />
           </g>
-          <g id="Group_7">
+          <g
+            id="Group_7"
+            // className="anim-flash anim-flash--svg anim-flash--star-4"
+          >
             <path
               id="Vector_18"
               d="M337.136 15.4439L334.192 5.20567L331.397 15.4439L321.537 18.6848L331.397 21.9993L334.192 33.1214L337.283 22.0729L346.848 18.6848L337.136 15.4439Z"
               fill="#FFD62A"
             />
           </g>
-          <g id="Group_8" className="animation animation--bounce">
+          <g
+            id="Group_8"
+            // className="anim-flash anim-flash--svg anim-flash--star-1"
+          >
             <path
               id="Vector_19"
               d="M144.881 331.503L141.938 321.264L139.142 331.503L129.283 334.817L139.142 338.132L141.938 349.18L145.029 338.205L154.593 334.817L144.881 331.503Z"
