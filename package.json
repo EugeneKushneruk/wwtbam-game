@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "run-prettier": "npx prettier --write .",
     "cypress:open": "cypress open",
-    "test": "npm run lint"
+    "pre-commit-hook": "npm run lint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
