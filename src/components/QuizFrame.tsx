@@ -11,6 +11,7 @@ import {
   gameOver,
   selectCurrentQuestion,
 } from "@/redux/slices/game";
+import classNames from "classnames";
 
 function QuizFrame() {
   const dispatch = useAppDispatch();
@@ -70,11 +71,15 @@ function QuizFrame() {
             const disabled = disableAllBtn || chosenAnswers.has(id);
             const correct = showResult && correctAnswers.has(id);
             const wrong = showResult && !correct;
+            const btnClass = classNames("quiz-frame__btn", {
+              "anim-flash": selected && !correct,
+              "anim-pulse": correct,
+            });
 
             return (
               <button
                 type="button"
-                className="quiz-frame__btn"
+                className={btnClass}
                 onClick={() => btnHandler(id)}
                 disabled={disabled}
                 key={`ans-${id}`}

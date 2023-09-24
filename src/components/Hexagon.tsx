@@ -27,8 +27,8 @@ function Hexagon(props: HexagonProps) {
     "hexagon--active": active,
     "hexagon--inactive": inactive,
     "hexagon--as-btn": asBtn,
-    "hexagon--as-btn-selected anim-flash": selected && !correct && !wrong,
-    "hexagon--as-btn-correct anim-pulse": correct && !wrong,
+    "hexagon--as-btn-selected": selected && !correct && !wrong,
+    "hexagon--as-btn-correct": correct && !wrong,
     "hexagon--as-btn-wrong": wrong,
   });
   const wrapperCls = classNames("hexagon__wrapper", {
