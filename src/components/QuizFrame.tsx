@@ -58,11 +58,13 @@ function QuizFrame() {
   }, [showResult, chosenAnswers, correctAnswers, dispatch]);
 
   return (
-    <section className="quiz-frame">
+    <section className="quiz-frame anim-bg-transition">
       <MenuBtn />
       <div className="quiz-frame__wrapper">
-        <h3 className="quiz-frame__question">{question}</h3>
-        <div className="quiz-frame__answers">
+        <h3 className="quiz-frame__question anim-slide-in-down anim-slide-in-down--dly-1">
+          {question}
+        </h3>
+        <div className="quiz-frame__answers anim-slide-in-up anim-slide-in-up--dly-1-5">
           {answers.map(({ id, text, prefix }) => {
             const selected = chosenAnswers.has(id);
             const disabled = disableAllBtn || chosenAnswers.has(id);

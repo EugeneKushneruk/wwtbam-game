@@ -20,7 +20,7 @@ function ProgressBar() {
     <aside className={cmpClass}>
       <MenuButton />
       <div className="progress-bar__list-wrapper">
-        <ul className="progress-bar__list">
+        <ul className="progress-bar__list anim-slide-in-down">
           {progress.map(({ level, money }, idx) => {
             const active = idx === step;
             const inactive = idx < step;

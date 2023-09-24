@@ -29,7 +29,7 @@
       justify-content: space-between
       align-items: center
 
-  &__title
+  &__message
     margin: 0 0 64px
     padding: 0
     @include mix.flex(column nowrap, center, flex-start)
@@ -43,16 +43,14 @@
       font-size: 32px
       align-items: center
 
-  &__message
-    @extend #{$this}__title
-
   &__message-txt
-    &:first-child
-      color: var.$black-100
-      opacity: .5
-      font-size: 32px
-      @include mix.mobile-styles
-        font-size: 18px
+    #{$this}--game-over &
+      &:first-child
+        color: var.$black-100
+        opacity: .5
+        font-size: 32px
+        @include mix.mobile-styles
+          font-size: 18px
 
   &__btn
     padding: 20px 24px

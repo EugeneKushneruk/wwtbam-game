@@ -16,19 +16,14 @@ type InfoScreenTitleProps = {
 };
 
 function InfoScreenTitle({ isGameOver, money }: InfoScreenTitleProps) {
-  if (isGameOver) {
-    return (
-      <h1 className="info-screen__message">
-        <span className="info-screen__message-txt">Total score:</span>
-        <span className="info-screen__message-txt">{`${money} earned`}</span>
-      </h1>
-    );
-  }
+  const [firstLine, secondLine] = isGameOver
+    ? ["Total score:", `${money} earned`]
+    : ["Who wants to be", "a millionaire?"];
 
   return (
-    <h1 className="info-screen__title">
-      <span>Who wants to be</span>
-      <span>a millionaire?</span>
+    <h1 className="info-screen__message anim-fade-in-right anim-fade-in-right--dly-1">
+      <span className="info-screen__message-txt">{firstLine}</span>
+      <span className="info-screen__message-txt">{secondLine}</span>
     </h1>
   );
 }
@@ -48,12 +43,16 @@ function InfoScreen() {
 
   return (
     <section className={cmpClass}>
-      <div className="info-screen__cnt-wrapper">
+      <div className="info-screen__cnt-wrapper anim-fade-in-left">
         <ThumbSVG />
       </div>
       <div className="info-screen__cnt-wrapper">
         <InfoScreenTitle isGameOver={isGameOver} money={money} />
-        <button type="button" className="info-screen__btn" onClick={btnHandler}>
+        <button
+          type="button"
+          className="info-screen__btn anim-fade-in anim-fade-in--dly-2"
+          onClick={btnHandler}
+        >
           <span className="info-screen__btn-txt">{buttonTxt}</span>
         </button>
       </div>

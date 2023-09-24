@@ -27,14 +27,17 @@ function Hexagon(props: HexagonProps) {
     "hexagon--active": active,
     "hexagon--inactive": inactive,
     "hexagon--as-btn": asBtn,
-    "hexagon--as-btn-selected": selected,
-    "hexagon--as-btn-correct": correct,
+    "hexagon--as-btn-selected anim-flash": selected && !correct && !wrong,
+    "hexagon--as-btn-correct anim-pulse": correct && !wrong,
     "hexagon--as-btn-wrong": wrong,
+  });
+  const wrapperCls = classNames("hexagon__wrapper", {
+    "anim-pulse-2 anim-pulse-2--dly-1": active,
   });
 
   return (
     <span className={cmpClass}>
-      <span className="hexagon__wrapper">
+      <span className={wrapperCls}>
         {!!prefix && <span className="hexagon__txt-prefix">{prefix}</span>}
         <span className="hexagon__txt">{children}</span>
       </span>
